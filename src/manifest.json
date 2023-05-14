@@ -6,16 +6,16 @@
   "version": "1.0.0",
   "permissions": [
     "storage",
-    "cookie"
+    "cookies"
   ],
   "icons": {
-    "48": "assets/48x48.png",
-    "128": "assets/128x128.png"
+    "48": "48x48.png",
+    "128": "128x128.png"
   },
   "action": {
     "default_icon": {
-      "48": "assets/48x48.png",
-      "128": "assets/128x128.png"
+      "48": "48x48.png",
+      "128": "128x128.png"
     },
     "default_title": "cookie-manager",
     "default_popup": "popup.html"
