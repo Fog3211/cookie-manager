@@ -9,32 +9,13 @@
     "cookie"
   ],
   "icons": {
-    "48": "assets/logo-48.png",
-    "128": "assets/logo-128.png"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://www.youtube.com/live_chat*",
-        "https://www.youtube.com/live_chat_replay*"
-      ],
-      "js": [
-        "scripts/chat-injector.ts"
-      ],
-      "css": ["stylesheets/titlebar.css"],
-      "all_frames": true
-    }
-  ],
-  "{{firefox}}.background": {
-    "scripts": ["scripts/chat-background.ts"]
-  },
-  "{{chrome}}.background": {
-    "service_worker": "scripts/chat-background.ts"
+    "48": "assets/48x48.png",
+    "128": "assets/128x128.png"
   },
   "action": {
     "default_icon": {
-      "48": "assets/logo-48.png",
-      "128": "assets/logo-128.png"
+      "48": "assets/48x48.png",
+      "128": "assets/128x128.png"
     }
   },
   "web_accessible_resources": [
