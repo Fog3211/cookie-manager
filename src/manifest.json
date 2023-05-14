@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Cookie Manager by Fog3211",
+  "homepage_url": "https://github.com/Fog3211/cookie-manager",
+  "description": "A brower extension for managing cookies",
+  "version": "1.0.0",
+  "permissions": [
+    "storage",
+    "cookie"
+  ],
+  "icons": {
+    "48": "assets/logo-48.png",
+    "128": "assets/logo-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/live_chat*",
+        "https://www.youtube.com/live_chat_replay*"
+      ],
+      "js": [
+        "scripts/chat-injector.ts"
+      ],
+      "css": ["stylesheets/titlebar.css"],
+      "all_frames": true
+    }
+  ],
+  "{{firefox}}.background": {
+    "scripts": ["scripts/chat-background.ts"]
+  },
+  "{{chrome}}.background": {
+    "service_worker": "scripts/chat-background.ts"
+  },
+  "action": {
+    "default_icon": {
+      "48": "assets/logo-48.png",
+      "128": "assets/logo-128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "*" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "{{chrome}}.incognito": "split"
+}
