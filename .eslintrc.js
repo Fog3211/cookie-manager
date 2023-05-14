@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   env: {
     browser: true,
     es6: true,
@@ -91,11 +91,7 @@ module.exports = {
     ],
   },
   settings: {
-    'svelte3/typescript': () => require('typescript')
-  },
-  globals: {
-    Ytc: 'readonly',
-    Chat: 'readonly'
+    'svelte3/typescript': () => import('typescript')
   },
   root: true
 };

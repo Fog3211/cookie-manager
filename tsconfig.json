@@ -10,8 +10,11 @@
     "lib": [
       "DOM"
     ],
-    "target": "ES2017",
-    "resolveJsonModule": true
+    "target": "ESNext",
+    "module": "CommonJS",
+    "verbatimModuleSyntax": false,
+    "resolveJsonModule": true,
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*",

@@ -16,7 +16,9 @@
     "default_icon": {
       "48": "assets/48x48.png",
       "128": "assets/128x128.png"
-    }
+    },
+    "default_title": "cookie-manager",
+    "default_popup": "popup.html"
   },
   "web_accessible_resources": [
     {
@@ -24,9 +26,5 @@
       "matches": [ "<all_urls>" ]
     }
   ],
-  "options_ui": {
-    "page": "options.html",
-    "open_in_tab": true
-  },
   "{{chrome}}.incognito": "split"
 }

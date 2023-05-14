@@ -1,45 +1,23 @@
-const smelteTailwind = require('smelte/tailwind.config.js');
+import path from 'node:path'
+import initSkeleton from '@skeletonlabs/skeleton/tailwind/skeleton.cjs'
 
-const colors = {
-  primary: '#2196F3',
-  secondary: '#3f51b5',
-  error: '#f44336',
-  success: '#4caf50',
-  alert: '#ff9800',
-  blue: '#2196f3',
-  dark: '#212121'
-};
-
-const smelteConfig = {
-  colors,
-  darkMode: true,
+/** @type {import('tailwindcss').Config} */
+export default {
+  // 1. Apply the dark mode class setting:
+  darkMode: 'class',
+  content: [
+    './src/**/*.{html,js,svelte,ts}',
+    // 2. Append the path for the Skeleton NPM package and files:
+    path.join(
+      require.resolve('@skeletonlabs/skeleton'),
+      '../**/*.{html,js,svelte,ts}'
+    )
+  ],
   theme: {
-    extend: {
-      colors: {
-        member: {
-          light: '#0E5D10',
-          dark: '#04B301'
-        },
-        moderator: {
-          light: '#2441C0',
-          dark: '#A0BDFC'
-        },
-        owner: {
-          light: '#866518',
-          dark: '#FFD600'
-        },
-        deleted: {
-          light: '#6E6B6B',
-          dark: '#898888'
-        },
-        translated: {
-          light: '#004abd',
-          dark: '#d4ebff'
-        }
-      }
-    }
+    extend: {},
   },
-  purge: false
-};
-
-module.exports = smelteTailwind(smelteConfig);
+  plugins: [
+    // 3. Append the Skeleton plugin to the end of this list
+    initSkeleton()
+  ]
+}
