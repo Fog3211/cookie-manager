@@ -10,5 +10,6 @@
   class="text-base p-2"
   style="scrollbar-width: thin; scrollbar-color: #888 transparent;"
 >
+<button class="btn btn-primary">Button</button>
 hhhhh
 </div>
