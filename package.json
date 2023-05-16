@@ -20,10 +20,9 @@
     "build:firefox": "cross-env BROWSER=firefox vite build",
     "prebuild": "rimraf build",
     "package": "node utils/package.js",
-    "dev:chrome": "cross-env MINIFY=false BROWSER=chrome vite build --watch",
-    "dev:firefox": "cross-env MINIFY=false BROWSER=firefox vite build --watch",
+    "dev:chrome": "cross-env MINIFY=false BROWSER=chrome WATCH=true vite build --watch",
+    "dev:firefox": "cross-env MINIFY=false BROWSER=firefox WATCH=true vite build --watch",
     "start": "pnpm dev:chrome",
-    "start:none": "pnpm dev:chrome",
     "start:chrome": "cross-env AUTOLAUNCH=menace pnpm dev:chrome",
     "start:firefox": "cross-env AUTOLAUNCH=menace pnpm dev:firefox",
     "format:check": "eslint ."

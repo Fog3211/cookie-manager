@@ -10,7 +10,8 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, './build'),
     emptyOutDir: true,
-    minify: process.env.MINIFY !== 'false'
+    minify: process.env.MINIFY !== 'false',
+    watch: process.env.WATCH === 'true' ? {} : null
   },
   publicDir: 'assets',
   plugins: [
